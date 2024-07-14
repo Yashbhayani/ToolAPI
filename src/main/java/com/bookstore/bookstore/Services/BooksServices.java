@@ -46,6 +46,8 @@ public class BooksServices  implements BooksRepository {
     public BooksServices(AuthJwtRepository authjwtrepository) {
         this.authjwtrepository = authjwtrepository;
     }
+
+    @Override
     public Map<String, Object> insertBookData(
             String Token,
             String BookName,
@@ -58,64 +60,74 @@ public class BooksServices  implements BooksRepository {
     ) throws IOException {
         Map<String, Object> response = new HashMap<>();
         try{
-            int maxDescriptionLength = 500;
-            if(Description.length()>500){
-                String query = "SELECT CASE WHEN COUNT(*) = 1 " +
-                        "THEN 'True' ELSE 'False' END AS Result, " +
-                        "id  AS  ID " +
-                        "FROM usertable WHERE Email = ? && Role = 'Admin'";
-                Map<String, Object>  result = jdbcTemplate.queryForMap(query, new Object[]{Token});
-                if ("True".equals((String) result.get("Result"))) {
-                    String newQuery = "INSERT INTO bookstable (userid, BookName, Price, Description, Author_Name) VALUES (?, ?, ?, ?, ?, ?)";
-                    KeyHolder keyHolder = new GeneratedKeyHolder();
-                    int UID = (int) result.get("ID");
-                    jdbcTemplate.update(connection -> {
-                        PreparedStatement ps = connection.prepareStatement(newQuery, Statement.RETURN_GENERATED_KEYS);
-                        ps.setDouble(1, UID);
-                        ps.setString(2, BookName);
-                        ps.setDouble(4, Price);
-                        ps.setString(5, Description);
-                        ps.setString(6, Author_Name);
-                        return ps;
-                    }, keyHolder);
-                        Long generatedId = keyHolder.getKey().longValue();
+            if (authjwtrepository.isTokenValid(Token)) {
+                int maxDescriptionLength = 500;
+                if (Description.length() > 500) {
+                    String username = authjwtrepository.getUsernameFromToken(Token);
+                    SpResult = jdbcTemplate.queryForObject(SP, new Object[]{ProjectCodes.ProjectSpCodes.FINDEIDANDCHECKSTATUS.name()}, String.class);
+                    Map<String, Object> result = jdbcTemplate.queryForMap(SpResult, new Object[]{username});
+                    String userRoleResult = (String) result.get("Result");
+                    if (userRoleResult != null) {
+                        boolean isAdmin = Boolean.parseBoolean(userRoleResult);
+                        if (isAdmin) {
+                            String newQuery = "INSERT INTO bookstable (userid, BookName, Price, Description, Author_Name) VALUES (?, ?, ?, ?, ?, ?)";
+                            KeyHolder keyHolder = new GeneratedKeyHolder();
+                            int UID = (int) result.get("ID");
+                            jdbcTemplate.update(connection -> {
+                                PreparedStatement ps = connection.prepareStatement(newQuery, Statement.RETURN_GENERATED_KEYS);
+                                ps.setDouble(1, UID);
+                                ps.setString(2, BookName);
+                                ps.setDouble(4, Price);
+                                ps.setString(5, Description);
+                                ps.setString(6, Author_Name);
+                                return ps;
+                            }, keyHolder);
+                            Long generatedId = keyHolder.getKey().longValue();
 
-                        String Thumbnailname = Thumbnailimage.getOriginalFilename();
-                        String ThumbnailrendomId = UUID.randomUUID().toString();
-                        String ThumbnailFileRandomName = ThumbnailrendomId.concat(Thumbnailname.substring(Thumbnailname.lastIndexOf(".")));
-                        String ThumbnailFullPath = thumbnailimagepath + File.separator + ThumbnailFileRandomName;
-                        File Thumbnailf = new File(thumbnailimagepath);
-                        if (!Thumbnailf.exists()) {
-                            Thumbnailf.mkdir();
+                            String Thumbnailname = Thumbnailimage.getOriginalFilename();
+                            String ThumbnailrendomId = UUID.randomUUID().toString();
+                            String ThumbnailFileRandomName = ThumbnailrendomId.concat(Thumbnailname.substring(Thumbnailname.lastIndexOf(".")));
+                            String ThumbnailFullPath = thumbnailimagepath + File.separator + ThumbnailFileRandomName;
+                            File Thumbnailf = new File(thumbnailimagepath);
+                            if (!Thumbnailf.exists()) {
+                                Thumbnailf.mkdir();
+                            }
+                            Files.copy(Image.getInputStream(), Paths.get(ThumbnailFullPath));
+                            String ThumbnailimageQuery = "INSERT INTO thumbnailimagetable (bookId, image) VALUES (?, ?)";
+                            jdbcTemplate.update(ThumbnailimageQuery, generatedId, ThumbnailFileRandomName);
+
+                            String name = Image.getOriginalFilename();
+                            String rendomId = UUID.randomUUID().toString();
+                            String FileRandomName = rendomId.concat(name.substring(name.lastIndexOf(".")));
+                            String FullPath = path + File.separator + FileRandomName;
+                            File f = new File(path);
+                            if (!f.exists()) {
+                                f.mkdir();
+                            }
+                            Files.copy(Image.getInputStream(), Paths.get(FullPath));
+                            String ImagetableQuery = "INSERT INTO imagetable (bookId, image) VALUES (?, ?)";
+                            jdbcTemplate.update(ImagetableQuery, generatedId, FileRandomName);
+
+
+                            String Query = "INSERT INTO languagetable (bookId, language) VALUES (?, ?)";
+                            jdbcTemplate.update(Query, generatedId, language);
+
+                            response.put("Message", "Data Added!");
+                            response.put("Success", true);
+                        } else {
+                            response.put("Message", "User is Not valid");
+                            response.put("Success", false);
                         }
-                        Files.copy(Image.getInputStream(), Paths.get(ThumbnailFullPath));
-                        String ThumbnailimageQuery = "INSERT INTO thumbnailimagetable (bookId, image) VALUES (?, ?)";
-                        jdbcTemplate.update(ThumbnailimageQuery, generatedId, ThumbnailFileRandomName);
-
-                        String name = Image.getOriginalFilename();
-                        String rendomId = UUID.randomUUID().toString();
-                        String FileRandomName = rendomId.concat(name.substring(name.lastIndexOf(".")));
-                        String FullPath = path + File.separator + FileRandomName;
-                        File f = new File(path);
-                        if (!f.exists()) {
-                            f.mkdir();
-                        }
-                        Files.copy(Image.getInputStream(), Paths.get(FullPath));
-                        String ImagetableQuery = "INSERT INTO imagetable (bookId, image) VALUES (?, ?)";
-                        jdbcTemplate.update(ImagetableQuery, generatedId, FileRandomName);
-
-
-                    String Query = "INSERT INTO languagetable (bookId, language) VALUES (?, ?)";
-                    jdbcTemplate.update(Query, generatedId, language);
-
-                    response.put("Message", "Data Added!");
-                    response.put("Success", true);
-                }else {
-                    response.put("Message", "User can't add it!");
+                    } else {
+                        response.put("Message", "User can't add it!");
+                        response.put("Success", false);
+                    }
+                } else {
+                    response.put("Message", "Up to 500");
                     response.put("Success", false);
                 }
-            }else{
-                response.put("Message", "Up to 500");
+            } else {
+                response.put("Message", "User is Not valid");
                 response.put("Success", false);
             }
         }catch (Exception e){
@@ -125,6 +137,7 @@ public class BooksServices  implements BooksRepository {
         return  response;
     }
 
+    @Override
     public Map<String, Object> getBookData(String Token, Integer bookitem) {
         Map<String, Object> response = new HashMap<>();
         try{
@@ -202,6 +215,7 @@ public class BooksServices  implements BooksRepository {
         return response;
     }
 
+    @Override
     public Map<String, Object> getBook(String token, String bookId) {
         Map<String, Object> response = new HashMap<>();
 
@@ -316,4 +330,3 @@ public class BooksServices  implements BooksRepository {
         }
     }
 }
-

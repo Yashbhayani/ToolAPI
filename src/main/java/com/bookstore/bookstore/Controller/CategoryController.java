@@ -1,7 +1,7 @@
 package com.bookstore.bookstore.Controller;
 
+import com.bookstore.bookstore.EntityModels.ICategoryModel;
 import com.bookstore.bookstore.Repository.CategoryRepository;
-import com.bookstore.bookstore.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -29,6 +29,54 @@ public class CategoryController {
             @RequestParam("report") String report
     ) throws IOException {
         return  categoryRepository.getCategory(Token, report);
+    }
+
+    @GetMapping("/category/select-category/list")
+    public Map<String, Object> SelectList(
+            @RequestHeader("token") String Token,
+            @RequestParam("pid") int PID
+    ) throws IOException {
+        return  categoryRepository.getselectCategorylist(Token, PID);
+    }
+
+    @GetMapping("/category/code-verify")
+    public  Map<String, Object> CategoryCode(
+            @RequestHeader("token") String Token,
+            @RequestParam("code") String Code
+    ) throws IOException{
+        return categoryRepository.getCategoryCode(Token, Code);
+    }
+
+    @GetMapping("/category/path-verify")
+    public  Map<String, Object> CategoryPath(
+            @RequestHeader("token") String Token,
+            @RequestParam("code") String Code
+    ) throws IOException{
+        return categoryRepository.getCategoryPath(Token, Code);
+    }
+
+    @PostMapping("/category/save")
+    public Map<String, Object> Save(
+            @RequestHeader("token") String Token,
+            @RequestBody ICategoryModel iCategoryModel
+    ) throws IOException {
+        return  categoryRepository.save(Token, iCategoryModel);
+    }
+
+    @PutMapping("/category/update")
+    public Map<String, Object> Update(
+            @RequestHeader("token") String Token,
+            @RequestBody ICategoryModel iCategoryModel
+    ) throws IOException {
+        return  categoryRepository.update(Token, iCategoryModel);
+    }
+
+    @DeleteMapping("/category/delete")
+    public Map<String, Object> Delete(
+            @RequestHeader("token") String Token,
+            @RequestParam("cid") String cId
+    ) throws IOException {
+        return  categoryRepository.delete(Token, cId);
     }
 
 }

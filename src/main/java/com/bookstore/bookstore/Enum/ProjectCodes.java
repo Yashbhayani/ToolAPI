@@ -8,7 +8,11 @@ public class ProjectCodes {
         GETBOOKSWITHREVIEWSTARS,
         BOOKALLDETAILS,
         GETBOOKSFORUSERADMIN,
-        VERIFYPRODUCTCODE
+        VERIFYPRODUCTCODE,
+        FINDEIDANDCHECKSTATUS,
+        VERIFYCATEGORYCODE,
+        VERIFYCATEGORYPATH,
+        PRODUCTSTATUS
     }
     public enum LoginCode{
         LOGINCODE
@@ -17,5 +21,9 @@ public class ProjectCodes {
         ALLPRODUCTTYPES,
         ALLCATEGORYTYPES,
         ALLSUBCATEGORYTYPES
+    }
+    public enum SelectCodes{
+        SELECTPRODUCT,
+        SELECTCATEGORY
     }
 }

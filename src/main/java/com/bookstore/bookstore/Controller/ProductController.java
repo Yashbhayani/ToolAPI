@@ -1,5 +1,6 @@
 package com.bookstore.bookstore.Controller;
 
+import com.bookstore.bookstore.EntityModels.IProductModel;
 import com.bookstore.bookstore.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -31,6 +32,11 @@ public class ProductController {
         return  productRepository.getproduct(Token, report);
     }
 
+    @GetMapping("/product/select-product/list")
+    public Map<String, Object> SelectList(@RequestHeader("token") String Token) throws IOException {
+        return  productRepository.getselectproductlist(Token);
+    }
+
     @GetMapping("/product/code-verify")
     public  Map<String, Object> ProductCode(
             @RequestHeader("token") String Token,
@@ -42,16 +48,24 @@ public class ProductController {
     @PostMapping("/product/save")
     public Map<String, Object> Save(
             @RequestHeader("token") String Token,
-            @RequestBody String report
+            @RequestBody IProductModel iProductModel
     ) throws IOException {
-        return  productRepository.getproduct(Token, report);
+        return  productRepository.save(Token, iProductModel);
     }
 
-    @PutMapping ("/product/edit")
+    @PutMapping("/product/update")
     public Map<String, Object> Update(
             @RequestHeader("token") String Token,
-            @RequestBody String report
+            @RequestBody IProductModel iProductModel
     ) throws IOException {
-        return  productRepository.getproduct(Token, report);
+        return  productRepository.update(Token, iProductModel);
+    }
+
+    @DeleteMapping ("/product/delete")
+    public Map<String, Object> Delete(
+            @RequestHeader("token") String Token,
+            @RequestParam("pid") String pId
+    ) throws IOException {
+        return  productRepository.delete(Token, pId);
     }
 }

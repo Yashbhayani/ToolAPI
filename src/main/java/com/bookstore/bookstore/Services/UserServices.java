@@ -62,6 +62,7 @@ public class UserServices implements Userrepository {
                 return "Email Id is already added!";
             }
         }*/
+    @Override
     public Map<String, Object> Login(User user) {
         String _hasPass = encryptionService.encrypt(user.getPassword());
         System.out.println(_hasPass);
@@ -132,6 +133,7 @@ public class UserServices implements Userrepository {
             return response;
     }
 
+    @Override
     public InputStream getResource(String fileName) throws FileNotFoundException {
             String fullpath = path + File.separator + fileName;
             InputStream is = new FileInputStream(fullpath);
