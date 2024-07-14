@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0a506c6-1e34-4607-9ae7-8b1e1d52e8ed" name="Changes" comment="YB - SubCategory">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/CustomModel/ListModel/SubCategory/SubCategoryTypesModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/CustomModel/Model/SubCategoryTypeModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Controller/SubCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Controller/SubCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Enum/ProjectCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Enum/ProjectCodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/CategoryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/CategoryServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/ProductServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/ProductServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/SubCategoryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/SubCategoryServices.java" afterDir="false" />
-    </list>
+    <list default="true" id="b0a506c6-1e34-4607-9ae7-8b1e1d52e8ed" name="Changes" comment="YB - SubCategory" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,27 +64,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BookstoreApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.BookstoreApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.bookstore.bookstore.BookstoreApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.bookstore.bookstore.BookstoreApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bookstore [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bookstore [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bookstore [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Dev&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Spring/BookApp/booksbacktoretool&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.5149425&quot;,
-    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BookstoreApplication (1).executor": "Run",
+    "Application.BookstoreApplication.executor": "Run",
+    "Application.com.bookstore.bookstore.BookstoreApplication (1).executor": "Run",
+    "Application.com.bookstore.bookstore.BookstoreApplication.executor": "Run",
+    "Maven.bookstore [install].executor": "Run",
+    "Maven.bookstore [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
+    "Maven.bookstore [package].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Projects/Spring/BookApp/booksbacktoretool",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.5149425",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\Spring\bookstore\src\main\resources\static" />
