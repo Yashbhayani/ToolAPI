@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0a506c6-1e34-4607-9ae7-8b1e1d52e8ed" name="Changes" comment="YB - SubCategory">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/CustomModel/ListModel/SubCategory/SubCategoryTypesModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/CustomModel/Model/SubCategoryTypeModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Controller/SubCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Controller/SubCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Enum/ProjectCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Enum/ProjectCodes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/CategoryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/CategoryServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/ProductServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/ProductServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/SubCategoryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookstore/bookstore/Services/SubCategoryServices.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="development" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Yashbhayani/BookAPi.git&quot;,
+    &quot;accountId&quot;: &quot;6386a150-eaa1-44ec-b062-fdf584729af6&quot;
+  }
+}</component>
+  <component name="JvmLoggingSettingsStorage">
+    <option name="loggerId" value="Slf4j" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2diYZ9JQYOXc3FDagCG2BORpmEu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BookstoreApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.BookstoreApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.bookstore.bookstore.BookstoreApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.bookstore.bookstore.BookstoreApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bookstore [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bookstore [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.bookstore [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Spring/BookApp/booksbacktoretool&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5149425&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Spring\bookstore\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BookstoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bookstore.bookstore.BookstoreApplication" />
+      <module name="bookstore" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BookstoreApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0a506c6-1e34-4607-9ae7-8b1e1d52e8ed" name="Changes" comment="" />
+      <created>1710501541139</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710501541139</updated>
+      <workItem from="1710501542689" duration="904000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:javax.persistence:javax.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="YB18- Dashboard" />
+    <MESSAGE value="Add" />
+    <MESSAGE value="first commit" />
+    <MESSAGE value="YB - Code" />
+    <MESSAGE value="YashBhayani" />
+    <MESSAGE value="Yb - Chnages" />
+    <MESSAGE value="YB - SubCategory" />
+    <option name="LAST_COMMIT_MESSAGE" value="YB - SubCategory" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.zaxxer.hikari.pool.HikariProxyCallableStatement" memberName="delegate" />
+        <PinnedItemInfo parentTag="com.mysql.cj.protocol.a.result.ResultsetRowsStatic" memberName="owner" />
+        <PinnedItemInfo parentTag="com.mysql.cj.jdbc.CallableStatement" memberName="results" />
+        <PinnedItemInfo parentTag="com.mysql.cj.jdbc.result.ResultSetImpl" memberName="nextResultset" />
+        <PinnedItemInfo parentTag="com.zaxxer.hikari.pool.HikariProxyCallableStatement" memberName="connection" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="report" language="JAVA" />
+        <watch expression="((ResultSetImpl)((HikariProxyResultSet)rsCategory).delegate).currentRow" custom="com.zaxxer.hikari.pool.HikariProxyResultSet,com.mysql.cj.jdbc.result.ResultSetImpl" />
+        <watch expression="((HikariProxyResultSet)rs).delegate" custom="com.zaxxer.hikari.pool.HikariProxyResultSet" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
