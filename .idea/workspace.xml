@@ -85,6 +85,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.BookstoreApplication (1).executor&quot;: &quot;Run&quot;,
@@ -104,8 +105,29 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.5149425&quot;,
     &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BookstoreApplication (1).executor": "Run",
+    "Application.BookstoreApplication.executor": "Run",
+    "Application.com.bookstore.bookstore.BookstoreApplication (1).executor": "Run",
+    "Application.com.bookstore.bookstore.BookstoreApplication.executor": "Run",
+    "Maven.bookstore [install].executor": "Run",
+    "Maven.bookstore [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
+    "Maven.bookstore [package].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Projects/Spring/BookApp/booksbacktoretool",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.5149425",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+>>>>>>> 4c81d9b4fdf7581ab95c2dfb802b0fcdba997e41
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\Spring\bookstore\src\main\resources\static" />
