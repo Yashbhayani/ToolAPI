@@ -4,6 +4,7 @@ import com.bookstore.bookstore.CustomModel.ListModel.Category.CategoryTypesModel
 import com.bookstore.bookstore.CustomModel.ListModel.SubCategory.SubCategoryTypesModel;
 import com.bookstore.bookstore.CustomModel.Model.CategoryTypeModel;
 import com.bookstore.bookstore.CustomModel.Model.SubCategoryTypeModel;
+import com.bookstore.bookstore.EntityModels.ISubCategoryModel;
 import com.bookstore.bookstore.Enum.ProjectCodes;
 import com.bookstore.bookstore.Repository.AuthJwtRepository;
 import com.bookstore.bookstore.Repository.SubCategoryRepository;
@@ -108,5 +109,30 @@ public class SubCategoryServices implements SubCategoryRepository {
             response.put("Success", false);
         }
         return response;
+    }
+
+    @Override
+    public Map<String, Object> getSubCategoryCode(String Token, String Code) {
+        return Map.of();
+    }
+
+    @Override
+    public Map<String, Object> getSubCategoryPath(String Token, String Code) {
+        return Map.of();
+    }
+
+    @Override
+    public Map<String, Object> save(String Token, ISubCategoryModel iSubCategoryModel) {
+        return Map.of();
+    }
+
+    @Override
+    public Map<String, Object> update(String Token, ISubCategoryModel iSubCategoryModel) {
+        return Map.of();
+    }
+
+    @Override
+    public Map<String, Object> delete(String Token, String scid) {
+        return Map.of();
     }
 }
